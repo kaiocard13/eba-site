@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow"><!-- RASCUNHO: remover na publicação -->
+<title>EBA - Espaço de Brincar Amora</title>
+<meta name="description" content="1º Espaço de Brincar de Arujá. Brincar livre, abordagem Pikler e mais de 500m² de área brincante para a primeira infância.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+<style>
+/* Brandbook EBA: roxo #750D7C, verde #059F56, lilás #C690C1, branco. Fonte: Century Gothic */
+:root{
+  --roxo:#750D7C;
+  --roxo-escuro:#3a0640;
+  --lilas:#f4e8f5;
+  --lilas-marca:#C690C1;
+  --verde:#059F56;
+  --verde-botao:#04804a;
+  --verde-claro:#dff3e8;
+  --amarelo:#ffe9a8;
+  --texto:#4a4350;
+  --fonte:"Century Gothic","Questrial","Avenir Next",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{font-family:var(--fonte);color:var(--texto);background:#fff;line-height:1.55;-webkit-text-size-adjust:100%;overflow-x:hidden}
+h1,h2,h3{font-family:var(--fonte);color:var(--roxo);font-weight:700;line-height:1.1;letter-spacing:-.015em}
+h2{font-size:clamp(1.9rem,6vw,2.8rem);margin:4px 0 10px}
+h3{font-size:1.05rem;margin-bottom:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px;position:relative}
+.eyebrow{color:var(--verde-botao);font-weight:700;font-size:.95rem}
+.btn{display:inline-block;background:var(--verde-botao);color:#fff;text-decoration:none;font-weight:700;padding:15px 28px;border-radius:999px;transition:transform .2s,background .2s}
+.btn:hover{background:#036638;transform:translateY(-2px) rotate(-1deg)}
+.btn:focus-visible,a:focus-visible{outline:3px solid var(--roxo);outline-offset:3px}
+
+/* topo */
+header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.95);backdrop-filter:blur(6px)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:80px;gap:16px}
+.logo{font-weight:700;color:var(--roxo);font-size:1.3rem;text-decoration:none;display:flex;align-items:center}
+header nav{display:none;gap:22px}
+header nav a{color:var(--roxo);text-decoration:none;font-size:.95rem;font-weight:700}
+header nav a:hover{color:var(--verde-botao)}
+header .btn{padding:9px 20px;font-size:.95rem}
+
+/* formas e ondas */
+.onda{display:block;width:100%;height:auto;margin-bottom:-1px}
+.bola{position:absolute;border-radius:50%;pointer-events:none;animation:flutua 7s ease-in-out infinite}
+.b1{width:70px;height:70px;background:var(--lilas-marca);opacity:.55;top:8%;left:-18px}
+.b2{width:34px;height:34px;background:var(--verde);opacity:.5;top:58%;right:6%;animation-delay:-2s}
+.b3{width:48px;height:48px;background:#f4c542;opacity:.6;bottom:8%;left:38%;animation-delay:-4s}
+@keyframes flutua{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+
+/* hero */
+.hero{background:var(--lilas);padding:40px 0 20px;position:relative}
+.hero .wrap{display:grid;gap:28px;align-items:center}
+.hero h1{font-size:clamp(2.4rem,9vw,4.2rem);margin:8px 0 12px}
+.hero p.sub{margin-bottom:22px;font-size:1.1rem}
+.foto{background:linear-gradient(135deg,var(--lilas-marca),#9fd9ba);overflow:hidden;aspect-ratio:1/1}
+.foto img{width:100%;height:100%;object-fit:cover;display:block}
+.blob1{border-radius:62% 38% 55% 45% / 48% 58% 42% 52%}
+.blob2{border-radius:40% 60% 38% 62% / 55% 40% 60% 45%}
+
+/* sobre */
+.sobre{padding:44px 0 28px}
+.sobre .wrap{display:grid;gap:26px;align-items:center}
+.sobre p.grande{font-size:1.2rem;color:var(--roxo);margin-bottom:16px}
+.pills{display:flex;flex-wrap:wrap;gap:10px}
+.pill{background:var(--verde-claro);color:#075c34;font-weight:700;border-radius:999px;padding:9px 18px;font-size:.95rem}
+.pill:nth-child(2){background:var(--lilas);color:var(--roxo)}
+.pill:nth-child(3){background:var(--amarelo);color:#6b4e00}
+
+/* rotina em cards */
+.rotina{background:var(--verde-claro);padding:0 0 56px}
+.rotina .wrap{padding-top:36px}
+.mini{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:20px}
+.mini div{background:#fff;border-radius:22px;padding:20px 12px;text-align:center;font-weight:700;color:var(--roxo);font-size:.98rem;transition:transform .25s}
+.mini div:hover{transform:translateY(-4px) rotate(-2deg)}
+.mini span{display:block;font-size:2rem;margin-bottom:6px}
+.mini div:nth-child(even):hover{transform:translateY(-4px) rotate(2deg)}
+
+/* galeria */
+.galeria{padding:44px 0}
+.mosaico{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:18px}
+.mosaico .foto{aspect-ratio:1/1;border-radius:26px}
+.mosaico .foto:nth-child(2n){border-radius:50% 26px 26px 26px}
+.mosaico .foto:nth-child(3n){border-radius:26px 26px 50% 26px}
+.mosaico .foto:nth-child(1){grid-column:span 2;aspect-ratio:4/3}
+.mosaico .foto img{object-position:center 35%}
+
+/* espaço */
+.espaco{background:var(--roxo);color:#fff;padding:0 0 52px;text-align:center}
+.espaco .wrap{padding-top:40px}
+.espaco h2,.espaco .eyebrow{color:#fff}
+.espaco .eyebrow{opacity:.85}
+.num{font-size:clamp(4rem,18vw,7rem);font-weight:700;line-height:1;color:#ffd96b}
+.espaco .chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;list-style:none;margin:20px 0}
+.espaco .chips li{background:rgba(255,255,255,.14);border-radius:999px;padding:8px 16px;font-size:.95rem}
+
+/* eventos */
+.eventos{padding:48px 0}
+.grid4{display:grid;gap:14px;margin-top:18px}
+.item{border-radius:24px;padding:22px;background:var(--lilas)}
+.item:nth-child(2){background:var(--verde-claro)}
+.item:nth-child(3){background:var(--amarelo)}
+.item p{font-size:.97rem}
+
+/* depoimentos em carrossel */
+.depo{background:var(--lilas);padding:0 0 52px}
+.depo .wrap{padding-top:36px}
+.trilho{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 20px 18px;margin-top:14px;-webkit-overflow-scrolling:touch}
+.card{flex:0 0 min(84%,340px);scroll-snap-align:center;background:#fff;border-radius:24px;padding:24px}
+.estrelas{color:#c27e00;letter-spacing:2px;margin-bottom:8px}
+.card p{font-size:.97rem}
+.card strong{color:var(--roxo-escuro);display:block}
+.card span{color:var(--verde-botao);font-size:.85rem}
+.quem{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.quem img{width:56px;height:56px;border-radius:50%;object-fit:cover;flex:none;background:var(--lilas-marca)}
+.quem strong{display:block}
+.dica{font-size:.85rem;opacity:.7;padding:0 20px}
+
+/* contato */
+.contato{background:var(--verde-botao);color:#fff;text-align:center;padding:0 0 56px}
+.contato .wrap{padding-top:44px}
+.contato h2,.contato .eyebrow{color:#fff}
+.contato .btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:22px 0 16px}
+.contato .btn{background:#fff;color:var(--roxo)}
+.contato .btn:hover{background:var(--amarelo)}
+.contato .btn.zap{background:var(--amarelo);color:#4a3600}
+.contato address{font-style:normal;opacity:.95}
+.contato address a{color:#fff}
+.redes{display:flex;gap:12px;justify-content:center;margin-top:18px;flex-wrap:wrap}
+.redes a{color:#fff;border:2px solid rgba(255,255,255,.7);border-radius:999px;padding:8px 18px;text-decoration:none;font-weight:700;font-size:.95rem}
+.redes a:hover{background:rgba(255,255,255,.18)}
+
+footer{background:var(--roxo-escuro);color:#e9dcf3;padding:36px 0 26px;text-align:center}
+footer .logo{justify-content:center;margin-bottom:8px;color:#fff}
+footer p{font-size:.95rem;margin-bottom:14px}
+footer small{opacity:.75;font-size:.8rem}
+
+@media(min-width:760px){
+  header nav{display:flex}
+  .hero .wrap{grid-template-columns:1.1fr 1fr}
+  .sobre .wrap{grid-template-columns:1fr 1.1fr}
+  .mini{grid-template-columns:repeat(3,1fr)}
+  .mosaico{grid-template-columns:repeat(4,1fr)}
+  .mosaico{grid-auto-rows:240px}
+  .mosaico .foto{aspect-ratio:auto}
+  .mosaico .foto:nth-child(1){grid-column:span 2;grid-row:span 2;aspect-ratio:auto}
+  .grid4{grid-template-columns:repeat(2,1fr)}
+  .trilho{padding-left:calc((100vw - 1000px)/2)}
+}
+@media(min-width:960px){.grid4{grid-template-columns:repeat(4,1fr)}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.bola{animation:none}.btn,.mini div{transition:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#topo">
+      <img src="img/eba-logo-horizontal.png" alt="EBA - Espaço de Brincar Amora" height="60" style="display:block;height:60px;width:auto" onerror="this.replaceWith(document.createTextNode('EBA Amora'))">
+    </a>
+    <nav aria-label="Seções">
+      <a href="#sobre">Quem somos</a>
+      <a href="#rotina">Rotina</a>
+      <a href="#espaco">Espaço</a>
+      <a href="#depoimentos">Famílias</a>
+    </nav>
+    <a class="btn" href="#contato">Contato</a>
+  </div>
+</header>
+
+<main id="topo">
+
+  <div class="hero">
+    <i class="bola b1"></i><i class="bola b2"></i><i class="bola b3"></i>
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">EBA - Espaço de Brincar Amora</p>
+        <h1>Lugar de convívio, cuidados e desenvolvimento</h1>
+        <p class="sub">Especializados na primeira infância</p>
+        <a class="btn" href="#contato">Vem brincar com a gente!</a>
+      </div>
+      <div class="foto blob1"><img src="img/foto-1.jpg" alt="Crianças brincando no EBA" onerror="this.remove()"></div>
+    </div>
+    <svg class="onda" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path fill="#fff" d="M0,40 C240,90 480,0 720,40 C960,80 1200,10 1440,45 L1440,80 L0,80 Z"/></svg>
+  </div>
+
+  <section class="sobre" id="sobre">
+    <div class="wrap">
+      <div class="foto blob2"><img src="img/foto-2.jpg" alt="Criança brincando no EBA" onerror="this.remove()"></div>
+      <div>
+        <p class="eyebrow">Sobre nós</p>
+        <h2>O 1º Espaço de Brincar de Arujá</h2>
+        <p class="grande">Aqui criança brinca de verdade, no seu tempo, com espaço preparado e educadores por perto.</p>
+        <div class="pills">
+          <span class="pill">Abordagem Pikler</span>
+          <span class="pill">Livre brincar</span>
+          <span class="pill">Aprender brincando</span>
+        </div>
+        <!-- CONFIRMAR faixa etária atual: site antigo dizia "1 a 6 anos"; briefing diz 0 a 4 -->
+      </div>
+    </div>
+  </section>
+
+  <div class="rotina" id="rotina">
+    <svg class="onda" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path fill="#fff" d="M0,40 C240,90 480,0 720,40 C960,80 1200,10 1440,45 L1440,0 L0,0 Z"/></svg>
+    <div class="wrap">
+      <p class="eyebrow">Um dia no EBA</p>
+      <h2>Todo dia tem descoberta</h2>
+      <div class="mini">
+        <div><span>🤗</span>Acolhimento</div>
+        <div><span>🎵</span>Roda de música</div>
+        <div><span>🌱</span>Mão na terra</div>
+        <div><span>🏖️</span>Tanque de areia</div>
+        <div><span>🚲</span>Passeio de triciclo</div>
+        <div><span>😴</span>Soninho</div>
+      </div>
+    </div>
+  </div>
+
+  <section class="galeria" aria-labelledby="gal">
+    <div class="wrap">
+      <p class="eyebrow">Um pouquinho do nosso dia</p>
+      <h2 id="gal">Brincar é coisa séria</h2>
+      <div class="mosaico">
+        <div class="foto"><img src="img/galeria-1.jpg" alt="Crianças brincando juntas na grama" loading="lazy" onerror="this.remove()"></div>
+        <div class="foto"><img src="img/galeria-2.jpg" alt="Menina sorrindo no tanque de areia" loading="lazy" onerror="this.remove()"></div>
+        <div class="foto"><img src="img/galeria-3.jpg" alt="Crianças lavando carrinhos numa bacia" loading="lazy" onerror="this.remove()"></div>
+        <div class="foto"><img src="img/galeria-4.jpg" alt="Brincadeira sensorial com argila" loading="lazy" onerror="this.remove()"></div>
+        <div class="foto"><img src="img/galeria-5.jpg" alt="Menina sorrindo com flores num potinho" style="object-position:center 8%" loading="lazy" onerror="this.remove()"></div>
+        <div class="foto"><img src="img/galeria-6.jpg" alt="Festa de fantasia no quintal" loading="lazy" onerror="this.remove()"></div>
+        <div class="foto"><img src="img/galeria-7.jpg" alt="Parque Pikler no quintal do EBA" loading="lazy" onerror="this.remove()"></div>
+        <div class="foto"><img src="img/galeria-8.jpg" alt="Criança observando as galinhas" loading="lazy" onerror="this.remove()"></div>
+        <div class="foto"><img src="img/galeria-9.jpg" alt="Café da manhã com pãezinhos no EBA" loading="lazy" onerror="this.remove()"></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="espaco" id="espaco">
+    <svg class="onda" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path fill="#fff" d="M0,40 C240,90 480,0 720,40 C960,80 1200,10 1440,45 L1440,0 L0,0 Z"/></svg>
+    <div class="wrap">
+      <p class="eyebrow">Nosso cantinho</p>
+      <div class="num">500m²</div>
+      <h2>de área brincante</h2>
+      <ul class="chips">
+        <li>Parque Pikler</li>
+        <li>Parede de escalada</li>
+        <li>Ateliê botânico</li>
+        <li>Refeitório Montessori</li>
+        <li>Quadra coberta</li>
+        <li>Painel de pintura</li>
+      </ul>
+      <p>Tudo em um ambiente seguro e monitorado.</p>
+    </div>
+  </div>
+
+  <section class="eventos">
+    <div class="wrap">
+      <p class="eyebrow">Diversão</p>
+      <h2>Tem festa, tem oficina, tem ateliê</h2>
+      <div class="grid4">
+        <div class="item"><h3>Datas especiais</h3><p>Dia das Mães, Pais, Crianças, Avós, Festa Junina, Natal e mais.</p></div>
+        <div class="item"><h3>Aniversários</h3><p>Todo aniversário merece uma grande festa com os amiguinhos.</p></div>
+        <div class="item"><h3>Manualidades</h3><p>Receitas, desenhos e artesanatos pra criar e se sujar.</p></div>
+        <div class="item"><h3>Ateliê de Férias</h3><p>Atividades criativas para quem fica no EBA nas férias.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="depo" id="depoimentos">
+    <svg class="onda" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path fill="#fff" d="M0,40 C240,90 480,0 720,40 C960,80 1200,10 1440,45 L1440,0 L0,0 Z"/></svg>
+    <div class="wrap">
+      <p class="eyebrow">O bom feedback nos orgulha e motiva!</p>
+      <h2>O que as famílias dizem</h2>
+    </div>
+    <!-- Nomes reais: confirmar com a Valéria antes de publicar (LGPD) -->
+    <div class="trilho" tabindex="0" aria-label="Depoimentos, deslize para o lado">
+      <div class="card">
+        <div class="estrelas" aria-label="5 estrelas">★★★★★</div>
+        <div class="quem"><img src="img/depo-1.jpeg" alt="" width="56" height="56" onerror="this.remove()"><div><strong>Dayse Fróis</strong><span>Mamãe do Miguel</span></div></div>
+        <p>Já são quase 4 anos com essa equipe fantástica. Essa rede de apoio que me dá extrema segurança em deixar meus pequenos diamantes lá. ❣️</p>
+      </div>
+      <div class="card">
+        <div class="estrelas" aria-label="5 estrelas">★★★★★</div>
+        <div class="quem"><img src="img/depo-2.jpeg" alt="" width="56" height="56" onerror="this.remove()"><div><strong>Mari Bicalho</strong><span>Mamãe do Bernardo</span></div></div>
+        <p>O Eba é um local em que as crianças podem ficar e brincar livremente. É extremamente acolhedor e as meninas têm um cuidado com as crianças que não tem igual. Meus filhos amam esse lugar! ❤️</p>
+      </div>
+      <div class="card">
+        <div class="estrelas" aria-label="5 estrelas">★★★★★</div>
+        <div class="quem"><img src="img/depo-3.jpeg" alt="" width="56" height="56" onerror="this.remove()"><div><strong>Vivian Correcher</strong><span>Tia do Daniel</span></div></div>
+        <p>Espaço maravilhoso demais. Cheio de amor e cuidado. Os pais podem ficar muito tranquilos porque lá as crianças de fato estão sendo cuidadas brincando de verdade. Tem uma estrutura incrível e adaptada especialmente para os pequenos se desenvolverem da melhor forma.</p>
+      </div>
+      <div class="card">
+        <div class="estrelas" aria-label="5 estrelas">★★★★★</div>
+        <div class="quem"><img src="img/depo-4.jpeg" alt="" width="56" height="56" onerror="this.remove()"><div><strong>Diarlem Souza</strong><span>Mamãe da Maria</span></div></div>
+        <p>Lugar acolhedor, não só a criança mas também a família. As meninas estão ressignificando o cuidado e o brincar com amor. Dedicadas e esforçadas! Eba, obrigada por cuidar tão bem dos amores da nossa vida. 💜</p>
+      </div>
+      <div class="card">
+        <div class="estrelas" aria-label="5 estrelas">★★★★★</div>
+        <div class="quem"><img src="img/depo-5.jpeg" alt="" width="56" height="56" onerror="this.remove()"><div><strong>Laura</strong><span>Mamãe do Miguel</span></div></div>
+        <p>Excelente, ambiente super gostoso e criativo, as crianças amam... EBA é uma mãe pra gente. ❤️</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="contato" id="contato">
+    <svg class="onda" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path fill="#f4e8f5" d="M0,40 C240,90 480,0 720,40 C960,80 1200,10 1440,45 L1440,0 L0,0 Z"/></svg>
+    <div class="wrap">
+      <p class="eyebrow">Vamos conversar?</p>
+      <h2>Venha conhecer e tomar um café com a gente</h2>
+      <!-- CONFIRMAR números (vieram do site de 2024) -->
+      <div class="btns">
+        <!-- Mensagem pronta = marcador do lead: filtrar no WhatsApp por "vim pelo site" -->
+        <a class="btn zap" href="https://wa.me/5511991521109?text=Oi!%20Vim%20pelo%20site%20do%20EBA%20e%20queria%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener">WhatsApp (11) 99152-1109</a>
+        <a class="btn zap" href="https://wa.me/5511992810164?text=Oi!%20Vim%20pelo%20site%20do%20EBA%20e%20queria%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener">WhatsApp (11) 99281-0164</a>
+      </div>
+      <address>
+        Rua Santa Cecília, 704 · Jordanópolis · Nova Arujá/SP<br>
+        <a href="https://www.google.com/maps/search/?api=1&query=Rua+Santa+Cec%C3%ADlia+704+Nova+Aruj%C3%A1+SP" target="_blank" rel="noopener">Ver no mapa</a>
+      </address>
+      <div class="redes">
+        <a href="https://www.instagram.com/espacodebrincaramora_eba/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/espacodebrincaramora" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.youtube.com/@EBAEspa%C3%A7odeBrincarAmora" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.tiktok.com/@espacodebrincaramora" target="_blank" rel="noopener">TikTok</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <small>Todos os direitos reservados © 2026 · Arujá/SP</small>
+  </div>
+</footer>
+
+</body>
+</html>
