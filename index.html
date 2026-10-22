@@ -126,7 +126,15 @@ header .btn{padding:9px 20px;font-size:.95rem}
 .contato .btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:22px 0 16px}
 .contato .btn{background:#fff;color:var(--roxo)}
 .contato .btn:hover{background:var(--amarelo)}
-.contato .btn.zap{background:var(--amarelo);color:#4a3600}
+.contato .btn.zap{background:var(--amarelo);color:#3d2d00;display:inline-flex;align-items:center;gap:12px;text-align:left;padding:14px 26px 14px 20px;box-shadow:0 5px 0 rgba(0,0,0,.22),0 10px 22px rgba(0,0,0,.18);border:2px solid rgba(255,255,255,.55)}
+.contato .btn.zap:hover{background:#fff;transform:translateY(-3px);box-shadow:0 8px 0 rgba(0,0,0,.2),0 14px 26px rgba(0,0,0,.2)}
+.contato .btn.zap:active{transform:translateY(2px);box-shadow:0 2px 0 rgba(0,0,0,.25)}
+.contato .btn.zap svg{width:30px;height:30px;flex:none;fill:#059F56}
+.contato .btn.zap span{display:block;line-height:1.2}
+.contato .btn.zap strong{display:block;font-size:1.05rem}
+.contato .btn.zap small{display:block;font-size:.85rem;font-weight:500;opacity:.85}
+.mapa{margin:26px auto 0;max-width:760px;border-radius:24px;overflow:hidden;border:4px solid rgba(255,255,255,.6);line-height:0}
+.mapa iframe{width:100%;height:300px;border:0}
 .contato address{font-style:normal;opacity:.95}
 .contato address a{color:#fff}
 .redes{display:flex;gap:12px;justify-content:center;margin-top:18px;flex-wrap:wrap}
@@ -203,7 +211,6 @@ footer small{opacity:.75;font-size:.8rem}
           <span class="pill">Livre brincar</span>
           <span class="pill">Aprender brincando</span>
         </div>
-        <!-- CONFIRMAR faixa etária atual: site antigo dizia "1 a 6 anos"; briefing diz 0 a 4 -->
       </div>
     </div>
   </section>
@@ -279,7 +286,6 @@ footer small{opacity:.75;font-size:.8rem}
       <p class="eyebrow">O bom feedback nos orgulha e motiva!</p>
       <h2>O que as famílias dizem</h2>
     </div>
-    <!-- Nomes reais: confirmar com a Valéria antes de publicar (LGPD) -->
     <div class="trilho" tabindex="0" aria-label="Depoimentos, deslize para o lado">
       <div class="card">
         <div class="estrelas" aria-label="5 estrelas">★★★★★</div>
@@ -314,16 +320,15 @@ footer small{opacity:.75;font-size:.8rem}
     <div class="wrap">
       <p class="eyebrow">Vamos conversar?</p>
       <h2>Venha conhecer e tomar um café com a gente</h2>
-      <!-- CONFIRMAR números (vieram do site de 2024) -->
       <div class="btns">
-        <!-- Mensagem pronta = marcador do lead: filtrar no WhatsApp por "vim pelo site" -->
-        <a class="btn zap" href="https://wa.me/5511991521109?text=Oi!%20Vim%20pelo%20site%20do%20EBA%20e%20queria%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener">WhatsApp (11) 99152-1109</a>
-        <a class="btn zap" href="https://wa.me/5511992810164?text=Oi!%20Vim%20pelo%20site%20do%20EBA%20e%20queria%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener">WhatsApp (11) 99281-0164</a>
+        <a class="btn zap" href="https://wa.me/5511991521109?text=Oi!%20Vim%20pelo%20site%20do%20EBA%20e%20queria%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.47 15.04L2 22l5.1-1.34A9.93 9.93 0 1 0 12.04 2Zm5.8 14.1c-.25.7-1.45 1.34-2 1.4-.5.06-1.13.09-1.82-.12-.42-.13-.96-.31-1.65-.6-2.9-1.25-4.8-4.17-4.94-4.37-.14-.19-1.18-1.57-1.18-3s.75-2.13 1.02-2.42c.27-.29.58-.36.78-.36h.56c.18 0 .42-.07.65.5.25.6.84 2.06.91 2.2.07.15.12.32.02.51-.1.2-.15.32-.29.49-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.29.76 1.25 1.63 2.03 1.12 1 2.07 1.31 2.36 1.46.29.14.46.12.63-.07.17-.2.73-.85.92-1.14.2-.29.39-.24.66-.14.27.1 1.7.8 2 .95.29.15.49.22.56.34.07.12.07.7-.18 1.4Z"/></svg><span><strong>Falar com Valéria</strong><small>(11) 99152-1109</small></span></a>
+        <a class="btn zap" href="https://wa.me/5511992810164?text=Oi!%20Vim%20pelo%20site%20do%20EBA%20e%20queria%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.47 15.04L2 22l5.1-1.34A9.93 9.93 0 1 0 12.04 2Zm5.8 14.1c-.25.7-1.45 1.34-2 1.4-.5.06-1.13.09-1.82-.12-.42-.13-.96-.31-1.65-.6-2.9-1.25-4.8-4.17-4.94-4.37-.14-.19-1.18-1.57-1.18-3s.75-2.13 1.02-2.42c.27-.29.58-.36.78-.36h.56c.18 0 .42-.07.65.5.25.6.84 2.06.91 2.2.07.15.12.32.02.51-.1.2-.15.32-.29.49-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.29.76 1.25 1.63 2.03 1.12 1 2.07 1.31 2.36 1.46.29.14.46.12.63-.07.17-.2.73-.85.92-1.14.2-.29.39-.24.66-.14.27.1 1.7.8 2 .95.29.15.49.22.56.34.07.12.07.7-.18 1.4Z"/></svg><span><strong>Falar com Vanessa</strong><small>(11) 99281-0164</small></span></a>
       </div>
       <address>
         Rua Santa Cecília, 704 · Jordanópolis · Nova Arujá/SP<br>
-        <a href="https://www.google.com/maps/search/?api=1&query=Rua+Santa+Cec%C3%ADlia+704+Nova+Aruj%C3%A1+SP" target="_blank" rel="noopener">Ver no mapa</a>
+        <a href="https://maps.app.goo.gl/xrTdwdBgHFZVhiWx7" target="_blank" rel="noopener">Ver no Google Maps</a>
       </address>
+      <div class="mapa"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3661.495964063218!2d-46.339004300000006!3d-23.406444699999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce870fc35f7243%3A0xe6611ac27f1f3d57!2sEBA%20Espa%C3%A7o%20de%20Brincar%20Amora!5e0!3m2!1spt-BR!2sbr!4v1792703845845!5m2!1spt-BR!2sbr" title="Mapa: EBA Espaço de Brincar Amora" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
       <div class="redes">
         <a href="https://www.instagram.com/espacodebrincaramora_eba/" target="_blank" rel="noopener">Instagram</a>
         <a href="https://www.facebook.com/espacodebrincaramora" target="_blank" rel="noopener">Facebook</a>
