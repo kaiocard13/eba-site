@@ -114,6 +114,16 @@ header .btn{padding:9px 20px;font-size:.95rem}
 .depo .wrap{padding-top:36px}
 .trilho{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 20px 18px;margin-top:14px;-webkit-overflow-scrolling:touch}
 .card{flex:0 0 min(84%,340px);scroll-snap-align:center;background:#fff;border-radius:24px;padding:24px}
+.trilho{position:relative;scrollbar-width:none}
+.trilho::-webkit-scrollbar{display:none}
+.card{display:flex;flex-direction:column}
+.card .av{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;flex:none;background:var(--roxo);color:#fff;font-style:normal;font-weight:800;font-size:1.3rem}
+.card:nth-child(3n+1) .av{background:var(--verde-botao)}
+.card:nth-child(3n+2) .av{background:#c27e00}
+.depo .nota{margin-top:6px;font-weight:700;color:var(--roxo-escuro)}
+.depo .nota .estrelas{margin:0 6px 0 0}
+.vermais{text-align:center;margin-top:4px}
+.vermais a{color:var(--roxo);font-weight:700}
 .estrelas{color:#c27e00;letter-spacing:2px;margin-bottom:8px}
 .card p{font-size:.97rem}
 .card strong{color:var(--roxo-escuro);display:block}
@@ -289,12 +299,23 @@ footer small{opacity:.75;font-size:.8rem}
     <div class="wrap">
       <p class="eyebrow">O bom feedback nos orgulha e motiva!</p>
       <h2>O que as famílias dizem</h2>
+      <p class="nota"><span class="estrelas" aria-hidden="true">★★★★★</span> 5,0 no Google · 33 avaliações</p>
     </div>
     <div class="trilho" tabindex="0" aria-label="Depoimentos, deslize para o lado">
       <div class="card">
         <div class="estrelas" aria-label="5 estrelas">★★★★★</div>
+        <div class="quem"><i class="av" aria-hidden="true">L</i><div><strong>Luuu Mendonça</strong><span>Mamãe da Manuela</span></div></div>
+        <p>Gostaria de parabenizar a Escola de Brincar Eba pelo excelente trabalho realizado com as crianças. ❤️ É um ambiente acolhedor, cheio de carinho, dedicação e cuidado. A equipe demonstra amor pelo que faz e contribui de forma especial para o desenvolvimento e a felicidade dos pequenos. Somos muito gratos por todo o empenho e atenção com a nossa filha Manuela. Parabéns a toda equipe!</p>
+      </div>
+      <div class="card">
+        <div class="estrelas" aria-label="5 estrelas">★★★★★</div>
         <div class="quem"><img src="img/depo-1.jpeg" alt="" width="56" height="56" onerror="this.remove()"><div><strong>Dayse Fróis</strong><span>Mamãe do Miguel</span></div></div>
         <p>Já são quase 4 anos com essa equipe fantástica. Essa rede de apoio que me dá extrema segurança em deixar meus pequenos diamantes lá. ❣️</p>
+      </div>
+      <div class="card">
+        <div class="estrelas" aria-label="5 estrelas">★★★★★</div>
+        <div class="quem"><i class="av" aria-hidden="true">A</i><div><strong>Andreza Menezes</strong><span>Família do EBA</span></div></div>
+        <p>O melhor lugar para ser criança!! Tias que acolhem, cuidam, respeitam e amam as crianças. Espaço incrível e cheio de possibilidades. E a comida da tia Léia tem como tempero muito amor. Eu recomendo de olhos fechados 💜💚</p>
       </div>
       <div class="card">
         <div class="estrelas" aria-label="5 estrelas">★★★★★</div>
@@ -303,8 +324,18 @@ footer small{opacity:.75;font-size:.8rem}
       </div>
       <div class="card">
         <div class="estrelas" aria-label="5 estrelas">★★★★★</div>
+        <div class="quem"><i class="av" aria-hidden="true">A</i><div><strong>Amanda Butters</strong><span>Mamãe de dois Ebinhas</span></div></div>
+        <p>Minha admiração pelo EBA começou antes mesmo da matrícula, só de ver as postagens no Instagram. E desde a primeira visita minha admiração foi crescendo e se transformou num grande amor por esse lugar que respeita a criança na sua essência, que ensina na brincadeira cotidiana, que acolhe sentimentos e o tempo de desenvolvimento da criança. Além de priorizarem uma alimentação nutritiva, que eu considero fundamental na primeira infância pra construção de um paladar saudável.</p>
+      </div>
+      <div class="card">
+        <div class="estrelas" aria-label="5 estrelas">★★★★★</div>
         <div class="quem"><img src="img/depo-3.jpeg" alt="" width="56" height="56" onerror="this.remove()"><div><strong>Vivian Correcher</strong><span>Tia do Daniel</span></div></div>
         <p>Espaço maravilhoso demais. Cheio de amor e cuidado. Os pais podem ficar muito tranquilos porque lá as crianças de fato estão sendo cuidadas brincando de verdade. Tem uma estrutura incrível e adaptada especialmente para os pequenos se desenvolverem da melhor forma.</p>
+      </div>
+      <div class="card">
+        <div class="estrelas" aria-label="5 estrelas">★★★★★</div>
+        <div class="quem"><i class="av" aria-hidden="true">R</i><div><strong>Renata</strong><span>Família do EBA</span></div></div>
+        <p>Espetacular! Extensão de nossa casa. Cuidado, carinho, respeito e acolhimento. Um espaço onde encontramos amor e diversão, que somados têm um resultado positivo no desenvolvimento socioafetivo.</p>
       </div>
       <div class="card">
         <div class="estrelas" aria-label="5 estrelas">★★★★★</div>
@@ -317,6 +348,7 @@ footer small{opacity:.75;font-size:.8rem}
         <p>Excelente, ambiente super gostoso e criativo, as crianças amam... EBA é uma mãe pra gente. ❤️</p>
       </div>
     </div>
+    <p class="vermais"><a href="https://maps.app.goo.gl/xrTdwdBgHFZVhiWx7" target="_blank" rel="noopener">Ver todas as avaliações no Google</a></p>
   </div>
 
   <div class="contato" id="contato">
@@ -349,5 +381,20 @@ footer small{opacity:.75;font-size:.8rem}
   </div>
 </footer>
 
+<script>
+(function(){
+  var t=document.querySelector('.trilho');
+  if(!t||(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches))return;
+  var cs=t.querySelectorAll('.card'),i=0,pausado=false,retoma,visivel=true;
+  function alvo(c){return c.offsetLeft-(t.clientWidth-c.clientWidth)/2}
+  function ir(n){i=n;t.scrollTo({left:alvo(cs[i]),behavior:'smooth'})}
+  function pausa(){pausado=true;clearTimeout(retoma);retoma=setTimeout(function(){pausado=false},8000)}
+  ['mouseenter','touchstart','focusin','wheel','pointerdown'].forEach(function(e){t.addEventListener(e,pausa,{passive:true})});
+  t.addEventListener('mouseleave',function(){clearTimeout(retoma);retoma=setTimeout(function(){pausado=false},2000)});
+  t.addEventListener('scroll',function(){var m=1e9;for(var k=0;k<cs.length;k++){var d=Math.abs(alvo(cs[k])-t.scrollLeft);if(d<m){m=d;i=k}}},{passive:true});
+  if('IntersectionObserver' in window){new IntersectionObserver(function(en){visivel=en[0].isIntersecting}).observe(t)}
+  setInterval(function(){if(pausado||!visivel||document.hidden)return;ir((i+1)%cs.length)},5000);
+})();
+</script>
 </body>
 </html>
