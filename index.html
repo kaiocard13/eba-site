@@ -112,12 +112,12 @@ header .btn{padding:9px 20px;font-size:.95rem}
 /* depoimentos em carrossel */
 .depo{background:var(--lilas);padding:0 0 52px}
 .depo .wrap{padding-top:36px}
-.trilho{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 20px 18px;margin-top:14px;-webkit-overflow-scrolling:touch}
-.card{flex:0 0 min(84%,340px);scroll-snap-align:center;background:#fff;border-radius:24px;padding:24px}
+.trilho{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 20px 18px 0;margin-top:14px;-webkit-overflow-scrolling:touch}
+.card{flex:0 0 min(76%,270px);scroll-snap-align:start;background:#fff;border-radius:20px;padding:16px 18px}
 .trilho{position:relative;scrollbar-width:none}
 .trilho::-webkit-scrollbar{display:none}
 .card{display:flex;flex-direction:column}
-.card .av{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;flex:none;background:var(--roxo);color:#fff;font-style:normal;font-weight:800;font-size:1.3rem}
+.card .av{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;flex:none;background:var(--roxo);color:#fff;font-style:normal;font-weight:800;font-size:1.3rem}
 .card:nth-child(3n+1) .av{background:var(--verde-botao)}
 .card:nth-child(3n+2) .av{background:#c27e00}
 .depo .nota{margin-top:6px;font-weight:700;color:var(--roxo-escuro)}
@@ -125,11 +125,17 @@ header .btn{padding:9px 20px;font-size:.95rem}
 .vermais{text-align:center;margin-top:4px}
 .vermais a{color:var(--roxo);font-weight:700}
 .estrelas{color:#c27e00;letter-spacing:2px;margin-bottom:8px}
-.card p{font-size:.97rem}
+.topo{display:flex;align-items:flex-start;justify-content:space-between;gap:8px}
+.via{font-style:normal;font-size:.72rem;font-weight:700;border-radius:999px;padding:3px 10px;white-space:nowrap}
+.via.g{background:var(--verde-claro);color:#075c34}
+.via.w{background:var(--lilas);color:var(--roxo)}
+.card p{font-size:.9rem;line-height:1.45;display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden}
+.card p.aberto{display:block}
+.card .mais{display:inline-block;margin-top:6px;font-size:.85rem;font-weight:700;color:var(--roxo);text-decoration:underline}
 .card strong{color:var(--roxo-escuro);display:block}
 .card span{color:var(--verde-botao);font-size:.85rem}
-.quem{display:flex;align-items:center;gap:12px;margin-bottom:14px}
-.quem img{width:56px;height:56px;border-radius:50%;object-fit:cover;flex:none;background:var(--lilas-marca)}
+.quem{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.quem img{width:44px;height:44px;border-radius:50%;object-fit:cover;flex:none;background:var(--lilas-marca)}
 .quem strong{display:block}
 .dica{font-size:.85rem;opacity:.7;padding:0 20px}
 
@@ -170,7 +176,7 @@ footer small{opacity:.75;font-size:.8rem}
   .mosaico .foto{aspect-ratio:auto}
   .mosaico .foto:nth-child(1){grid-column:span 2;grid-row:span 2;aspect-ratio:auto}
   .grid4{grid-template-columns:repeat(3,1fr)}
-  .trilho{padding-left:calc((100vw - 1000px)/2)}
+
 }
 
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.bola{animation:none}.btn,.mini div{transition:none}}
@@ -299,56 +305,54 @@ footer small{opacity:.75;font-size:.8rem}
     <div class="wrap">
       <p class="eyebrow">O bom feedback nos orgulha e motiva!</p>
       <h2>O que as famílias dizem</h2>
-      <p class="nota"><span class="estrelas" aria-hidden="true">★★★★★</span> 5,0 no Google · 33 avaliações</p>
     </div>
     <div class="trilho" tabindex="0" aria-label="Depoimentos, deslize para o lado">
       <div class="card">
-        <div class="estrelas" aria-label="5 estrelas">★★★★★</div>
-        <div class="quem"><i class="av" aria-hidden="true">L</i><div><strong>Luuu Mendonça</strong><span>Mamãe da Manuela</span></div></div>
+        <div class="topo"><div class="estrelas" aria-label="5 estrelas">★★★★★</div><em class="via g">via Google</em></div>
+        <div class="quem"><img src="img/depo-6.png" alt="" width="56" height="56" loading="lazy" onerror="this.remove()"><div><strong>Luuu Mendonça</strong><span>Mamãe da Manuela</span></div></div>
         <p>Gostaria de parabenizar a Escola de Brincar Eba pelo excelente trabalho realizado com as crianças. ❤️ É um ambiente acolhedor, cheio de carinho, dedicação e cuidado. A equipe demonstra amor pelo que faz e contribui de forma especial para o desenvolvimento e a felicidade dos pequenos. Somos muito gratos por todo o empenho e atenção com a nossa filha Manuela. Parabéns a toda equipe!</p>
       </div>
       <div class="card">
-        <div class="estrelas" aria-label="5 estrelas">★★★★★</div>
+        <div class="topo"><div class="estrelas" aria-label="5 estrelas">★★★★★</div><em class="via w">via WhatsApp</em></div>
         <div class="quem"><img src="img/depo-1.jpeg" alt="" width="56" height="56" onerror="this.remove()"><div><strong>Dayse Fróis</strong><span>Mamãe do Miguel</span></div></div>
         <p>Já são quase 4 anos com essa equipe fantástica. Essa rede de apoio que me dá extrema segurança em deixar meus pequenos diamantes lá. ❣️</p>
       </div>
       <div class="card">
-        <div class="estrelas" aria-label="5 estrelas">★★★★★</div>
-        <div class="quem"><i class="av" aria-hidden="true">A</i><div><strong>Andreza Menezes</strong><span>Família do EBA</span></div></div>
+        <div class="topo"><div class="estrelas" aria-label="5 estrelas">★★★★★</div><em class="via g">via Google</em></div>
+        <div class="quem"><img src="img/depo-7.png" alt="" width="56" height="56" loading="lazy" onerror="this.remove()"><div><strong>Andreza Menezes</strong><span>Família do EBA</span></div></div>
         <p>O melhor lugar para ser criança!! Tias que acolhem, cuidam, respeitam e amam as crianças. Espaço incrível e cheio de possibilidades. E a comida da tia Léia tem como tempero muito amor. Eu recomendo de olhos fechados 💜💚</p>
       </div>
       <div class="card">
-        <div class="estrelas" aria-label="5 estrelas">★★★★★</div>
+        <div class="topo"><div class="estrelas" aria-label="5 estrelas">★★★★★</div><em class="via w">via WhatsApp</em></div>
         <div class="quem"><img src="img/depo-2.jpeg" alt="" width="56" height="56" onerror="this.remove()"><div><strong>Mari Bicalho</strong><span>Mamãe do Bernardo</span></div></div>
         <p>O Eba é um local em que as crianças podem ficar e brincar livremente. É extremamente acolhedor e as meninas têm um cuidado com as crianças que não tem igual. Meus filhos amam esse lugar! ❤️</p>
       </div>
       <div class="card">
-        <div class="estrelas" aria-label="5 estrelas">★★★★★</div>
-        <div class="quem"><i class="av" aria-hidden="true">A</i><div><strong>Amanda Butters</strong><span>Mamãe de dois Ebinhas</span></div></div>
+        <div class="topo"><div class="estrelas" aria-label="5 estrelas">★★★★★</div><em class="via g">via Google</em></div>
+        <div class="quem"><img src="img/depo-8.png" alt="" width="56" height="56" loading="lazy" onerror="this.remove()"><div><strong>Amanda Butters</strong><span>Mamãe de dois Ebinhas</span></div></div>
         <p>Minha admiração pelo EBA começou antes mesmo da matrícula, só de ver as postagens no Instagram. E desde a primeira visita minha admiração foi crescendo e se transformou num grande amor por esse lugar que respeita a criança na sua essência, que ensina na brincadeira cotidiana, que acolhe sentimentos e o tempo de desenvolvimento da criança. Além de priorizarem uma alimentação nutritiva, que eu considero fundamental na primeira infância pra construção de um paladar saudável.</p>
       </div>
       <div class="card">
-        <div class="estrelas" aria-label="5 estrelas">★★★★★</div>
+        <div class="topo"><div class="estrelas" aria-label="5 estrelas">★★★★★</div><em class="via w">via WhatsApp</em></div>
         <div class="quem"><img src="img/depo-3.jpeg" alt="" width="56" height="56" onerror="this.remove()"><div><strong>Vivian Correcher</strong><span>Tia do Daniel</span></div></div>
         <p>Espaço maravilhoso demais. Cheio de amor e cuidado. Os pais podem ficar muito tranquilos porque lá as crianças de fato estão sendo cuidadas brincando de verdade. Tem uma estrutura incrível e adaptada especialmente para os pequenos se desenvolverem da melhor forma.</p>
       </div>
       <div class="card">
-        <div class="estrelas" aria-label="5 estrelas">★★★★★</div>
-        <div class="quem"><i class="av" aria-hidden="true">R</i><div><strong>Renata</strong><span>Família do EBA</span></div></div>
+        <div class="topo"><div class="estrelas" aria-label="5 estrelas">★★★★★</div><em class="via g">via Google</em></div>
+        <div class="quem"><img src="img/depo-9.jpg" alt="" width="56" height="56" loading="lazy" onerror="this.remove()"><div><strong>Renata</strong><span>Família do EBA</span></div></div>
         <p>Espetacular! Extensão de nossa casa. Cuidado, carinho, respeito e acolhimento. Um espaço onde encontramos amor e diversão, que somados têm um resultado positivo no desenvolvimento socioafetivo.</p>
       </div>
       <div class="card">
-        <div class="estrelas" aria-label="5 estrelas">★★★★★</div>
+        <div class="topo"><div class="estrelas" aria-label="5 estrelas">★★★★★</div><em class="via w">via WhatsApp</em></div>
         <div class="quem"><img src="img/depo-4.jpeg" alt="" width="56" height="56" onerror="this.remove()"><div><strong>Diarlem Souza</strong><span>Mamãe da Maria</span></div></div>
         <p>Lugar acolhedor, não só a criança mas também a família. As meninas estão ressignificando o cuidado e o brincar com amor. Dedicadas e esforçadas! Eba, obrigada por cuidar tão bem dos amores da nossa vida. 💜</p>
       </div>
       <div class="card">
-        <div class="estrelas" aria-label="5 estrelas">★★★★★</div>
+        <div class="topo"><div class="estrelas" aria-label="5 estrelas">★★★★★</div><em class="via w">via WhatsApp</em></div>
         <div class="quem"><img src="img/depo-5.jpeg" alt="" width="56" height="56" onerror="this.remove()"><div><strong>Laura</strong><span>Mamãe do Miguel</span></div></div>
         <p>Excelente, ambiente super gostoso e criativo, as crianças amam... EBA é uma mãe pra gente. ❤️</p>
       </div>
     </div>
-    <p class="vermais"><a href="https://maps.app.goo.gl/xrTdwdBgHFZVhiWx7" target="_blank" rel="noopener">Ver todas as avaliações no Google</a></p>
   </div>
 
   <div class="contato" id="contato">
@@ -383,10 +387,21 @@ footer small{opacity:.75;font-size:.8rem}
 
 <script>
 (function(){
+  var url='https://maps.app.goo.gl/xrTdwdBgHFZVhiWx7';
+  document.querySelectorAll('.card p').forEach(function(p){
+    if(p.scrollHeight>p.clientHeight+2){
+      var a=document.createElement('a');a.className='mais';a.href=url;a.target='_blank';a.rel='noopener';a.textContent='ver mais';
+      p.insertAdjacentElement('afterend',a);
+    }
+  });
+})();
+</script>
+<script>
+(function(){
   var t=document.querySelector('.trilho');
   if(!t||(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches))return;
   var cs=t.querySelectorAll('.card'),i=0,pausado=false,retoma,visivel=true;
-  function alvo(c){return c.offsetLeft-(t.clientWidth-c.clientWidth)/2}
+  function alvo(c){return c.offsetLeft}
   function ir(n){i=n;t.scrollTo({left:alvo(cs[i]),behavior:'smooth'})}
   function pausa(){pausado=true;clearTimeout(retoma);retoma=setTimeout(function(){pausado=false},8000)}
   ['mouseenter','touchstart','focusin','wheel','pointerdown'].forEach(function(e){t.addEventListener(e,pausa,{passive:true})});
