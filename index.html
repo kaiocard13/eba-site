@@ -66,6 +66,10 @@ header .btn{padding:9px 20px;font-size:.95rem}
 .sobre .wrap{display:grid;gap:26px;align-items:center}
 .sobre p.grande{font-size:1.2rem;color:var(--roxo);margin-bottom:16px}
 .pills{display:flex;flex-wrap:wrap;gap:10px}
+.idades{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin-top:20px}
+.idades div{background:#fff;border:2px solid var(--lilas);border-radius:20px;padding:14px 18px}
+.idades strong{display:block;color:var(--roxo)}
+.idades span{display:block;font-size:.95rem}
 .pill{background:var(--verde-claro);color:#075c34;font-weight:700;border-radius:999px;padding:9px 18px;font-size:.95rem}
 .pill:nth-child(2){background:var(--lilas);color:var(--roxo)}
 .pill:nth-child(3){background:var(--amarelo);color:#6b4e00}
@@ -155,10 +159,10 @@ footer small{opacity:.75;font-size:.8rem}
   .mosaico{grid-auto-rows:240px}
   .mosaico .foto{aspect-ratio:auto}
   .mosaico .foto:nth-child(1){grid-column:span 2;grid-row:span 2;aspect-ratio:auto}
-  .grid4{grid-template-columns:repeat(2,1fr)}
+  .grid4{grid-template-columns:repeat(3,1fr)}
   .trilho{padding-left:calc((100vw - 1000px)/2)}
 }
-@media(min-width:960px){.grid4{grid-template-columns:repeat(4,1fr)}}
+
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.bola{animation:none}.btn,.mini div{transition:none}}
 </style>
 <link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
@@ -211,6 +215,7 @@ footer small{opacity:.75;font-size:.8rem}
           <span class="pill">Livre brincar</span>
           <span class="pill">Aprender brincando</span>
         </div>
+        <div class="idades"><div><strong>Livre brincar</strong><span>de 6 meses a 4 anos</span></div><div><strong>Contraturno escolar</strong><span>até 10 anos</span></div></div>
       </div>
     </div>
   </section>
@@ -226,7 +231,7 @@ footer small{opacity:.75;font-size:.8rem}
         <div><span>🌱</span>Mão na terra</div>
         <div><span>🏖️</span>Tanque de areia</div>
         <div><span>🚲</span>Passeio de triciclo</div>
-        <div><span>😴</span>Soninho</div>
+        <div><span>🥗</span>Alimentação saudável</div>
       </div>
     </div>
   </div>
@@ -241,7 +246,7 @@ footer small{opacity:.75;font-size:.8rem}
         <div class="foto"><img src="img/galeria-3.jpg" alt="Crianças lavando carrinhos numa bacia" loading="lazy" onerror="this.remove()"></div>
         <div class="foto"><img src="img/galeria-4.jpg" alt="Brincadeira sensorial com argila" loading="lazy" onerror="this.remove()"></div>
         <div class="foto"><img src="img/galeria-5.jpg" alt="Menina sorrindo com flores num potinho" style="object-position:center 8%" loading="lazy" onerror="this.remove()"></div>
-        <div class="foto"><img src="img/galeria-6.jpg" alt="Festa de fantasia no quintal" loading="lazy" onerror="this.remove()"></div>
+        <div class="foto"><img src="img/galeria-6.jpg" alt="Crianças fantasiadas no quintal" loading="lazy" onerror="this.remove()"></div>
         <div class="foto"><img src="img/galeria-7.jpg" alt="Parque Pikler no quintal do EBA" loading="lazy" onerror="this.remove()"></div>
         <div class="foto"><img src="img/galeria-8.jpg" alt="Criança observando as galinhas" loading="lazy" onerror="this.remove()"></div>
         <div class="foto"><img src="img/galeria-9.jpg" alt="Café da manhã com pãezinhos no EBA" loading="lazy" onerror="this.remove()"></div>
@@ -252,7 +257,7 @@ footer small{opacity:.75;font-size:.8rem}
   <div class="espaco" id="espaco">
     <svg class="onda" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path fill="#fff" d="M0,40 C240,90 480,0 720,40 C960,80 1200,10 1440,45 L1440,0 L0,0 Z"/></svg>
     <div class="wrap">
-      <p class="eyebrow">Nosso cantinho</p>
+      <p class="eyebrow">Nosso grande quintal</p>
       <div class="num">500m²</div>
       <h2>de área brincante</h2>
       <ul class="chips">
@@ -270,10 +275,9 @@ footer small{opacity:.75;font-size:.8rem}
   <section class="eventos">
     <div class="wrap">
       <p class="eyebrow">Diversão</p>
-      <h2>Tem festa, tem oficina, tem ateliê</h2>
+      <h2>Tem oficina, tem ateliê, tem datas especiais</h2>
       <div class="grid4">
         <div class="item"><h3>Datas especiais</h3><p>Dia das Mães, Pais, Crianças, Avós, Festa Junina, Natal e mais.</p></div>
-        <div class="item"><h3>Aniversários</h3><p>Todo aniversário merece uma grande festa com os amiguinhos.</p></div>
         <div class="item"><h3>Manualidades</h3><p>Receitas, desenhos e artesanatos pra criar e se sujar.</p></div>
         <div class="item"><h3>Ateliê de Férias</h3><p>Atividades criativas para quem fica no EBA nas férias.</p></div>
       </div>
